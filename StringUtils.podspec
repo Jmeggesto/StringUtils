@@ -25,8 +25,8 @@ A library of extensions to Swift's native String class encompassing numerous fea
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Jmeggesto" => "jackie.meggesto@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/StringUtils.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/jmeggesto/StringUtils.git", :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/jmeggesto
 
   s.ios.deployment_target = '8.0'
 
