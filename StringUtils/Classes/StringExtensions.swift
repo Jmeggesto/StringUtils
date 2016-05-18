@@ -141,7 +141,9 @@ public extension String {
     
     /**
      
-     Boolean representing whether `self` contains any emoji characters. The unichar value ranges for testing emoji should not be assumed to be exhaustive and extension of this property is highly encouraged.
+     Boolean representing whether `self` contains any emoji characters. 
+     The unichar value ranges for testing emoji should not be assumed to be exhaustive,
+     and extension of this property is highly encouraged.
      
      */
     public var containsEmoji: Bool {
@@ -205,7 +207,9 @@ public extension String {
      */
     func isNumber() -> Bool {
         
-        if (self.regex.matchesPattern(Regex.integerMatchingPattern) ||  self.regex.matchesPattern(Regex.floatMatchingPattern)) && !self.regex.matchesPattern(Regex.nonNumericMatchingPattern) {
+        if (self.regex.matchesPattern(Regex.integerMatchingPattern) ||
+            self.regex.matchesPattern(Regex.floatMatchingPattern))
+            && !self.regex.matchesPattern(Regex.nonNumericMatchingPattern) {
             return true
         }
         return false
