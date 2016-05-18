@@ -5,11 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/StringUtils.svg?style=flat)](http://cocoapods.org/pods/StringUtils)
 [![Platform](https://img.shields.io/cocoapods/p/StringUtils.svg?style=flat)](http://cocoapods.org/pods/StringUtils)
 
-## Example
+## Overview
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+A library of useful Swift String extensions. 
 
 ## Installation
 
