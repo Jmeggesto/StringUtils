@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "summary": "A short description of StringUtils.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/StringUtils",
+  "homepage": "https://github.com/jmeggesto/StringUtils",
   "license": "MIT",
   "authors": {
     "Jmeggesto": "jackie.meggesto@gmail.com"
