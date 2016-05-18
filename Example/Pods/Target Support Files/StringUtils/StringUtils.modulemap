@@ -1,0 +1,6 @@
+framework module StringUtils {
+  umbrella header "StringUtils-umbrella.h"
+
+  export *
+  module * { export * }
+}

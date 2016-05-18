@@ -1,0 +1,16 @@
+PODS:
+  - StringUtils (0.1.0)
+
+DEPENDENCIES:
+  - StringUtils (from `../`)
+
+EXTERNAL SOURCES:
+  StringUtils:
+    :path: ../
+
+SPEC CHECKSUMS:
+  StringUtils: ff7cf725f12af8180cf87a9a29b23b07540e43d0
+
+PODFILE CHECKSUM: 7accb8dae6a983fbef6f1dc0c562a8ff95a99c3c
+
+COCOAPODS: 1.0.0

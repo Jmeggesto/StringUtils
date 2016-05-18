@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "StringUtils"
   s.version          = "0.1.0"
-  s.summary          = "A short description of StringUtils."
+  s.summary          = "A library of extensions to Swift's String."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,10 +18,10 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A library of extensions to Swift's native String class encompassing numerous features the standard library lacks, and providing cleaner, neater API design for existing standard library features. Features include, but are not limited to: elegant regular expression handling, Python-style String slicing, using regular expressions to test whether a String is convertible to Int/Float/etc and automatically returning the numeric value.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/StringUtils"
+  s.homepage         = "https://github.com/jmeggesto/StringUtils"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Jmeggesto" => "jackie.meggesto@gmail.com" }

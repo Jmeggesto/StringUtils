@@ -1,0 +1,19 @@
+{
+  "name": "StringUtils",
+  "version": "0.1.0",
+  "summary": "A short description of StringUtils.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/StringUtils",
+  "license": "MIT",
+  "authors": {
+    "Jmeggesto": "jackie.meggesto@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/StringUtils.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "StringUtils/Classes/**/*"
+}

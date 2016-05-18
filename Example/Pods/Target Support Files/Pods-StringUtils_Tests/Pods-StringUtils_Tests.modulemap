@@ -1,0 +1,6 @@
+framework module Pods_StringUtils_Tests {
+  umbrella header "Pods-StringUtils_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
