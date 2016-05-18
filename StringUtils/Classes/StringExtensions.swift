@@ -65,7 +65,7 @@ public extension String {
     /// Returns the first index where `value` appears in `self` or `nil` if
     /// `value` is not found.
     ///
-    /// - Complexity: O(`self.count`).
+    /// - Complexity: O(n).
     func indexOf(element: String) -> Int? {
         
         return self.chars.indexOf(element)
