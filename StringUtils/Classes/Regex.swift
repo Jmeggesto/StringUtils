@@ -83,7 +83,7 @@ public struct R {
      - pattern : The regex pattern to find matches for.
      
      */
-    func firstMatchInString(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> String? {
+    public func firstMatchInString(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> String? {
         
         let regex = try! NSRegularExpression(pattern: pattern,
                                              options: options)
@@ -99,7 +99,7 @@ public struct R {
      - pattern : The regex pattern to find matches for.
      
      */
-    func matchesInString(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> [String] {
+    public func matchesInString(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> [String] {
         
         let regex = try! NSRegularExpression(pattern: pattern,
                                              options: options)
@@ -118,7 +118,7 @@ public struct R {
      
      */
     
-    func matchesPattern(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> Bool {
+    public func matchesPattern(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> Bool {
         let regex = try! NSRegularExpression(pattern: pattern,
                                              options: options)
         return regex.firstMatchInString(body, options: matchingOptions, range: NSMakeRange(0, body.length)) != nil
@@ -138,7 +138,7 @@ public struct R {
      An Array of **Grep** objects where `Grep.originalString` is the string in which a match was found, and `Grep.matches` is an Array of all matches in `originalString`.
      
      */
-    static func grep(array: [String], pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> [Grep] {
+    public static func grep(array: [String], pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> [Grep] {
         
         
         var tempgrep = [Grep]()
@@ -167,7 +167,7 @@ public struct R {
      
      */
     
-    static func grep<T where T: Hashable>(dict: Dictionary<T, String>, pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> [Grep] {
+    public static func grep<T where T: Hashable>(dict: Dictionary<T, String>, pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> [Grep] {
         
         var tempgrep = [Grep]()
         for (_, val) in dict {
