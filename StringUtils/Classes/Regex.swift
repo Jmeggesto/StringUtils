@@ -69,7 +69,8 @@ public struct R {
      */
     public func numberOfMatchesInString(pattern: String) ->Int {
         
-        let regex = try! NSRegularExpression(pattern: pattern,
+        let _pattern = pattern.replace("?", with: "\\?")
+        let regex = try! NSRegularExpression(pattern: _pattern,
                                              options: [.CaseInsensitive])
         
         return regex.matchesInString(body, options: [], range: NSMakeRange(0, body.length)).count
@@ -85,7 +86,8 @@ public struct R {
      */
     public func firstMatchInString(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> String? {
         
-        let regex = try! NSRegularExpression(pattern: pattern,
+        let _pattern = pattern.replace("?", with: "\\?")
+        let regex = try! NSRegularExpression(pattern: _pattern,
                                              options: options)
         let NSCopy = body as NSString
         let match = regex.firstMatchInString(body, options: matchingOptions, range: NSMakeRange(0, body.length))
@@ -101,7 +103,8 @@ public struct R {
      */
     public func matchesInString(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> [String] {
         
-        let regex = try! NSRegularExpression(pattern: pattern,
+        let _pattern = pattern.replace("?", with: "\\?")
+        let regex = try! NSRegularExpression(pattern: _pattern,
                                              options: options)
         let NSCopy = body as NSString
         let matches = regex.matchesInString(body, options: matchingOptions, range: NSMakeRange(0, body.length))
@@ -119,7 +122,8 @@ public struct R {
      */
     
     public func matchesPattern(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> Bool {
-        let regex = try! NSRegularExpression(pattern: pattern,
+        let _pattern = pattern.replace("?", with: "\\?")
+        let regex = try! NSRegularExpression(pattern: _pattern,
                                              options: options)
         return regex.firstMatchInString(body, options: matchingOptions, range: NSMakeRange(0, body.length)) != nil
     }
