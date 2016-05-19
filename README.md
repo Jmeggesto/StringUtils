@@ -16,7 +16,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 use_frameworks!
-target 'StringUtils_Tests' do
+target "YourXcodeProj" do
   pod 'StringUtils', '~> 0.1.1'
 
 end
