@@ -69,8 +69,8 @@ public struct R {
      */
     public func numberOfMatchesInString(pattern: String) ->Int {
         
-        var _pattern = "\(pattern)"
-        _pattern = _pattern.replace("?", with: "\\?")
+        var _pattern = pattern
+        _pattern.replace("?", with: "\\?")
         let regex = try! NSRegularExpression(pattern: _pattern,
                                              options: [.CaseInsensitive])
         
@@ -87,7 +87,7 @@ public struct R {
      */
     public func firstMatchInString(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> String? {
         
-        var _pattern = "\(pattern)"
+        var _pattern = pattern
         _pattern.replace("?", with: "\\?")
         let regex = try! NSRegularExpression(pattern: _pattern,
                                              options: options)
@@ -105,7 +105,7 @@ public struct R {
      */
     public func matchesInString(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> [String] {
         
-        var _pattern = "\(pattern)"
+        var _pattern = pattern
         _pattern.replace("?", with: "\\?")
         let regex = try! NSRegularExpression(pattern: _pattern,
                                              options: options)
@@ -126,7 +126,7 @@ public struct R {
     
     public func matchesPattern(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> Bool {
         
-        var _pattern = "\(pattern)"
+        var _pattern = pattern
         _pattern.replace("?", with: "\\?")
         let regex = try! NSRegularExpression(pattern: _pattern,
                                              options: options)
