@@ -31,7 +31,7 @@ returning the numeric value.
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Jmeggesto" => "jackie.meggesto@gmail.com" }
-  s.source           = { :git => "https://github.com/jmeggesto/StringUtils.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/Jmeggesto/StringUtils.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/jmeggesto
 
   s.ios.deployment_target = '8.0'
