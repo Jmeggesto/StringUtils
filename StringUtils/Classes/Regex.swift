@@ -69,7 +69,8 @@ public struct R {
      */
     public func numberOfMatchesInString(pattern: String) ->Int {
         
-        let _pattern = pattern.replace("?", with: "\\?")
+        var _pattern = pattern
+        _pattern.replace("?", with: "\\?")
         let regex = try! NSRegularExpression(pattern: _pattern,
                                              options: [.CaseInsensitive])
         
@@ -86,7 +87,8 @@ public struct R {
      */
     public func firstMatchInString(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> String? {
         
-        let _pattern = pattern.replace("?", with: "\\?")
+        var _pattern = pattern
+        _pattern.replace("?", with: "\\?")
         let regex = try! NSRegularExpression(pattern: _pattern,
                                              options: options)
         let NSCopy = body as NSString
@@ -103,7 +105,8 @@ public struct R {
      */
     public func matchesInString(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> [String] {
         
-        let _pattern = pattern.replace("?", with: "\\?")
+        var _pattern = pattern
+        _pattern.replace("?", with: "\\?")
         let regex = try! NSRegularExpression(pattern: _pattern,
                                              options: options)
         let NSCopy = body as NSString
@@ -122,7 +125,9 @@ public struct R {
      */
     
     public func matchesPattern(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> Bool {
-        let _pattern = pattern.replace("?", with: "\\?")
+        
+        var _pattern = pattern
+        _pattern.replace("?", with: "\\?")
         let regex = try! NSRegularExpression(pattern: _pattern,
                                              options: options)
         return regex.firstMatchInString(body, options: matchingOptions, range: NSMakeRange(0, body.length)) != nil
