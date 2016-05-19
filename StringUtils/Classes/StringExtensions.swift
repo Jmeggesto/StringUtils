@@ -245,7 +245,7 @@ public extension String {
 
 //Subscripts and slicing
 
-extension String
+public extension String
 {
     
     public func substring(from: Int, _ to: Int) -> String {
@@ -261,7 +261,7 @@ extension String
         }
         
     }
-    subscript(integerIndex: Int) -> String {
+    public subscript(integerIndex: Int) -> String {
         
         if integerIndex > 0 {
             let a = startIndex.advancedBy(integerIndex)
@@ -273,11 +273,11 @@ extension String
         
         
     }
-    subscript(integerRange: Range<Int>) -> String {
+    public subscript(integerRange: Range<Int>) -> String {
         return self.substring(integerRange.startIndex, integerRange.endIndex)
     }
     
-    subscript(slice: SliceType) -> String {
+    public subscript(slice: SliceType) -> String {
         
         var sliceCopy = slice
         if slice.stop == nil {
