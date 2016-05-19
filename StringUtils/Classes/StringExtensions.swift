@@ -35,6 +35,17 @@ public extension String {
         
     }
     
+    /**
+     
+     A Set<String> of the unique characters in `self`.
+     
+     */
+    public var charSet: Set<String> {
+        
+        return Set(self.characters.map{String($0)})
+        
+    }
+    
     public var firstCharacter: String? {
         
         return self.chars.first
@@ -61,7 +72,28 @@ public extension String {
         
         return self.regex.numberOfMatchesInString(string)
     }
-
+    
+    /**
+     
+     Returns the most common character in `self`. If `self.chars.count` == `self.charSet.count`, returns the first string in `self.charSet`.
+     
+     */
+    public func mostCommonCharacter() -> String {
+        
+        var mostCommon = ""
+        var count = 0
+        for string in self.charSet {
+            
+            if self.count(string) > count {
+                
+                count = self.count(string)
+                mostCommon = string
+            }
+            
+        }
+        return mostCommon
+        
+    }
     /// Returns the first index where `value` appears in `self` or `nil` if
     /// `value` is not found.
     ///
