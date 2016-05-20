@@ -295,7 +295,7 @@ public extension String
     }
     public subscript(integerIndex: Int) -> String {
         
-        if integerIndex > 0 {
+        if integerIndex >= 0 {
             let a = startIndex.advancedBy(integerIndex)
             return String(self[a])
         } else {
