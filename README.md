@@ -17,7 +17,7 @@ it, simply add the following line to your Podfile:
 ```ruby
 use_frameworks!
 target "YourXcodeProj" do
-  pod 'StringUtils', '~> 0.1.4'
+  pod 'StringUtils', '~> 0.1.5'
 
 end
 ```
