@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D013EDD1CF38D51000ED888 /* AlgorithmSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D013EDC1CF38D51000ED888 /* AlgorithmSource.swift */; };
+		5D013EDF1CF38E41000ED888 /* StringAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D013EDE1CF38E41000ED888 /* StringAlgorithms.swift */; };
 		5D83D49A7C7682E0BF48605CC71D53A5 /* StringUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 736916C806E8045EACA3AF2BD5D87E87 /* StringUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DF6819E1CED227600F0AB71 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6819B1CED227600F0AB71 /* Regex.swift */; };
 		5DF6819F1CED227600F0AB71 /* SliceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6819C1CED227600F0AB71 /* SliceType.swift */; };
@@ -34,6 +36,8 @@
 		26392DF0A696D93FB7B75E9892F464A7 /* StringUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StringUtils.xcconfig; sourceTree = "<group>"; };
 		395969B3AD54F570C8AD35216002F3C8 /* Pods-StringUtils_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StringUtils_Tests-resources.sh"; sourceTree = "<group>"; };
 		533ACA4DE741C14E43341664537803B7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D013EDC1CF38D51000ED888 /* AlgorithmSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmSource.swift; sourceTree = "<group>"; };
+		5D013EDE1CF38E41000ED888 /* StringAlgorithms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringAlgorithms.swift; sourceTree = "<group>"; };
 		5DF6819B1CED227600F0AB71 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		5DF6819C1CED227600F0AB71 /* SliceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliceType.swift; sourceTree = "<group>"; };
 		5DF6819D1CED227600F0AB71 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				5DF6819B1CED227600F0AB71 /* Regex.swift */,
 				5DF6819C1CED227600F0AB71 /* SliceType.swift */,
 				5DF6819D1CED227600F0AB71 /* StringExtensions.swift */,
+				5D013EDE1CF38E41000ED888 /* StringAlgorithms.swift */,
+				5D013EDC1CF38D51000ED888 /* AlgorithmSource.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -278,6 +284,8 @@
 				5DF681A01CED227600F0AB71 /* StringExtensions.swift in Sources */,
 				7BC3A9B4E506E5A027F3323A64070518 /* Pods-StringUtils_Tests-dummy.m in Sources */,
 				5DF6819F1CED227600F0AB71 /* SliceType.swift in Sources */,
+				5D013EDF1CF38E41000ED888 /* StringAlgorithms.swift in Sources */,
+				5D013EDD1CF38D51000ED888 /* AlgorithmSource.swift in Sources */,
 				5DF6819E1CED227600F0AB71 /* Regex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
