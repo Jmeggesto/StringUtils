@@ -27,7 +27,7 @@ whether a String is convertible to Int/Float/etc and automatically
 returning the numeric value.
                        DESC
 
-  s.homepage         = "https://github.com/jmeggesto/StringUtils"
+  s.homepage         = "https://github.com/Jmeggesto/StringUtils.git"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Jmeggesto" => "jackie.meggesto@gmail.com" }
