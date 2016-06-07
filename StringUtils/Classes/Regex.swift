@@ -37,13 +37,16 @@ public struct Grep: CustomStringConvertible {
 }
 /**
  
- The **R** struct (typealias: **Regex**) is a structure for performing regular expression operations on Strings.
+ The **R** struct (typealias: **Regex**) is a structure 
+ for performing regular expression operations on Strings.
  
  
  - **body** :
  The string upon which regular expression operations are to be performed.
  
- Instantiating this structure directly is discouraged: Strings possess a **regex** property by default via which regular expression operations should be performed.
+ Instantiating this structure directly is discouraged: 
+ Strings possess a **regex** property by default 
+ via which regular expression operations should be performed.
  
  */
 public typealias Regex = R
@@ -53,7 +56,7 @@ public struct R {
     public static let floatMatchingPattern = "^[-+]?([0-9]*\\.[0-9]+|[0-9]+)$"
     public static let nonNumericMatchingPattern = "[a-zA-Z]"
     
-    var body: String
+    public var body: String
     
     init(body: String) {
         self.body = body
@@ -100,7 +103,7 @@ public struct R {
      Returns an array of all substrings in `self.body` that match `pattern`.
      
      - parameters:
-     - pattern : The regex pattern to find matches for.
+        - pattern : The regex pattern to find matches for.
      
      */
     public func matchesInString(pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> [String] {
@@ -115,12 +118,34 @@ public struct R {
         
         
     }
+    
+    /**
+ 
+     Replaces all substrings in `self.body` that match the given `pattern` 
+     with a new string. 
+     
+     - parameters:
+        - pattern: The regex pattern to find matches for.
+        - with: The string to replace all found matches with.
+     
+     - returns: 
+        A new string with all substrings matching `pattern` replaced with a new string.
+     
+    */
+    public func replaceAll(regex pattern: String, with: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> String {
+        
+        let regex = try! NSRegularExpression(pattern: pattern, options: options)
+        
+        let range = NSRange(location: 0, length: pattern.length)
+        return regex.stringByReplacingMatchesInString(body, options: matchingOptions, range: range, withTemplate: with)
+        
+    }
     /**
      
      Tests whether or not `self.body` matches the given pattern.
      
      - parameters:
-     - pattern : The regex pattern to find matches for.
+        - pattern : The regex pattern to find matches for.
      
      */
     
@@ -140,11 +165,13 @@ public struct R {
      
      
      - parameters:
-     - array : An Array of Strings to search for.
-     - pattern: The regex pattern to find matches for.
+        - array : An Array of Strings to search for.
+        - pattern: The regex pattern to find matches for.
      
      - returns:
-     An Array of **Grep** objects where `Grep.originalString` is the string in which a match was found, and `Grep.matches` is an Array of all matches in `originalString`.
+        An Array of **Grep** objects where `Grep.originalString` 
+        is the string in which a match was found, 
+        and `Grep.matches` is an Array of all matches in `originalString`.
      
      */
     public static func grep(array: [String], pattern: String, options: NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions: NSMatchingOptions = []) -> [Grep] {
@@ -168,11 +195,13 @@ public struct R {
      
      
      - parameters:
-     - dict : A Dictionary of String value types to search for.
-     - pattern: The regex pattern to find matches for.
+        - dict : A Dictionary of String value types to search for.
+        - pattern: The regex pattern to find matches for.
      
      - returns:
-     An Array of **Grep** objects where `Grep.originalString` is the string in which a match was found, and `Grep.matches` is an Array of all matches in `originalString`.
+        An Array of **Grep** objects where `Grep.originalString` 
+        is the string in which a match was found, 
+        and `Grep.matches` is an Array of all matches in `originalString`.
      
      */
     
@@ -206,7 +235,9 @@ public extension String {
 infix operator =~ { associativity left precedence 140 }
 
 /**
- A convenience function to test whether `lhs` matches the regular expression pattern of `rhs`. Equivalent to `lhs.regex.matchesPattern(rhs)`.
+ A convenience function to test whether `lhs` 
+ matches the regular expression pattern of `rhs`. 
+ Equivalent to `lhs.regex.matchesPattern(rhs)`.
  
  */
 
