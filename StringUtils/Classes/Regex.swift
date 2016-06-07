@@ -137,7 +137,6 @@ public struct R {
         let regex = try! NSRegularExpression(pattern: pattern, options: options)
         
         let range = NSRange(location: 0, length: pattern.length)
-        let NSCopy = body as NSString
         return regex.stringByReplacingMatchesInString(body, options: matchingOptions, range: range, withTemplate: with)
         
     }
