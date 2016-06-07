@@ -75,7 +75,8 @@ public extension String {
     
     /**
      
-     Returns the most common character in `self`. If `self.chars.count` == `self.charSet.count`, returns the first string in `self.charSet`.
+     Returns the most common character in `self`. 
+     If `self.chars.count` == `self.charSet.count`, returns the first string in `self.charSet`.
      
      */
     public func mostCommonCharacter() -> String {
@@ -213,14 +214,16 @@ public extension String {
     
 }
 
-//Extensions for converting Strings into different value types/checking if String satisfies certain conditions.
+//Extensions for converting Strings into different value types,
+//checking if String satisfies certain conditions.
 
 public extension String {
     
     
     /**
      
-     Performs a regular expression operation on `self` to determine whether or not the String can be considered a valid email.
+     Performs a regular expression operation on `self` to determine 
+     whether or not the String can be considered a valid email.
      
      */
     public func isEmail() -> Bool {
@@ -250,14 +253,17 @@ public extension String {
     }
     /**
      
-     Uses regular expressions to determine whether `self` can be considered a valid numeric form, and if so, returns the numeric value of `self`
+     Uses regular expressions to determine whether `self` 
+     can be considered a valid numeric form, 
+     and if so, returns the numeric value of `self`
      
      Currently supported numeric formats:
      - Int literal
      - Double literal
      
      - returns:
-     An NSNumber value representing the numeric value contained within `self`. If `self` is not a valid numeric format, returns nil.
+        An NSNumber value representing the numeric value contained within `self`.
+        If `self` is not a valid numeric format, returns nil.
      
      
      */
@@ -282,11 +288,23 @@ public extension String {
 public extension String
 {
     
+    
+    /**
+ 
+    */
+    
     public func substring(from: Int, _ to: Int) -> String {
         let a = startIndex.advancedBy(from)
         let b = startIndex.advancedBy(to)
         return self[a..<b]
     }
+    
+    /**
+ 
+    Skips over the characters of `self` by `n` and returns a complete string
+     formed by concatenating the substrings.
+ 
+    */
     public func everyNth(n: Int) -> String {
         if n > 0 {
             return String(characters.enumerate().filter({ $0.0 % n == 0 }).map({ $0.1 }))
@@ -295,31 +313,67 @@ public extension String
         }
         
     }
-    public subscript(integerIndex: Int) -> String {
+    
+    
+    /**
+ 
+     Returns the character at index n of `self`.
+    
+     - returns: 
+        If `n` is positive, returns the character at index `n` of `self`. 
+        If `n` is negative, returns the character `n` steps from the end of `self`.
+     
+    */
+    
+    public subscript(n: Int) -> String {
         
-        if integerIndex >= 0 {
-            let a = startIndex.advancedBy(integerIndex)
+        if n >= 0 {
+            let a = startIndex.advancedBy(n)
             return String(self[a])
         } else {
-            let a = startIndex.advancedBy(self.length + integerIndex)
+            let a = startIndex.advancedBy(self.length + n)
             return String(self[a])
         }
         
         
     }
+    
+    /**
+ 
+     Allows for subscripting with Range<Int>. 
+     
+     - parameters: 
+        - integerRange: A Range<Int> object representing the range of `self`
+          to be returned.
+     - returns: 
+        Returns the section of `self` from the start of `integerRange`,
+        to the end of `integerRange`.
+     
+    */
+    
     public subscript(integerRange: Range<Int>) -> String {
         return self.substring(integerRange.startIndex, integerRange.endIndex)
     }
     
-    public subscript(slice: SliceType) -> String {
+    public func slice(from from: Int = 0, to: Int? = nil, by: Int = 1) -> String {
         
-        var sliceCopy = slice
-        if slice.stop == nil {
-            sliceCopy.stop = self.length
+        var _to = to
+        var _from = from
+        if to == nil {
+            
+            _to = self.length
         }
-        if slice.start < 0 {
-            sliceCopy.start = self.length + slice.start
+        if _to < 0 {
+            
+            _to = self.length + _to!
+            
         }
-        return self.substring(slice.start, sliceCopy.stop!).everyNth(slice.step)
+        if from < 0 {
+            _from = self.length + from
+        }
+        
+        return self.substring(_from, _to!).everyNth(by)
+        
     }
+    
 }

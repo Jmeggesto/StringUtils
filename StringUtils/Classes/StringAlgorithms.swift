@@ -12,7 +12,9 @@ public extension String {
     
     /**
  
-     Calculates the Levenshtein Distance between `self` and `string`. See AlgorithmSource.swift for implementation, or [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) on Wikipedia for more details.
+     Calculates the Levenshtein Distance between `self` and `string`. 
+     See AlgorithmSource.swift for implementation, 
+     or [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) on Wikipedia for more details.
      
     */
     public func distance(string: String) -> Int {
